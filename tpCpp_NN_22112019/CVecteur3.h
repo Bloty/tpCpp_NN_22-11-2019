@@ -17,8 +17,5 @@ public:
 	void setFtlZ(float fltZ);
 
 	//constructeur
-	CVecteur3();
-	CVecteur3(float fltX, float fltY, float fltZ);
-
-	
+	CVecteur3(float = 1.0, float = 0.0, float = 0.0);
 };

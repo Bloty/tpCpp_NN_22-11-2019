@@ -29,31 +29,19 @@ void CVecteur3::setFtlZ(float fltZ)
 }
 
 
-//partie a--------------------------------------------------------------------------
-//constructeur sans arguments
+
+
+//partie b--------------------------------------------------------------------------
 /*-------------------------------------
-But : Construction d'un vecteur 3D sans argument
-Entrer : l'instence crée
-Sortie : Le vecteur inisialiser a 0
+But : Construction d'un vecteur 3D sans ou avec argument
+Entrer : l'instence crée sans ou avec argument
+Sortie : Le vecteur inisialiser a 0 ou avec des parametres
 -------------------------------------*/
 
-CVecteur3::CVecteur3()
-{
-	this->m_fltX = 0;
-	this->m_fltY = 0;
-	this->m_fltZ = 0;
-
-}
-
-//constructeur avec arguments
-/*-------------------------------------
-But : Construction d'un vecteur 3D avec argument
-Entrer : l'instence crée et les parametre x, y, z
-Sortie : Le vecteur inisialiser avec les donnée entrer en argument
--------------------------------------*/
 CVecteur3::CVecteur3(float fltX, float fltY, float fltZ)
 {
 	this->m_fltX = fltX;
 	this->m_fltY = fltY;
 	this->m_fltZ = fltZ;
 }
+
