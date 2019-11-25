@@ -28,20 +28,3 @@ void CVecteur3::setFtlZ(float fltZ)
 	this->m_fltZ = fltZ;
 }
 
-
-
-
-//partie b--------------------------------------------------------------------------
-/*-------------------------------------
-But : Construction d'un vecteur 3D sans ou avec argument
-Entrer : l'instence crée sans ou avec argument
-Sortie : Le vecteur inisialiser a 0 ou avec des parametres
--------------------------------------*/
-
-CVecteur3::CVecteur3(float fltX, float fltY, float fltZ)
-{
-	this->m_fltX = fltX;
-	this->m_fltY = fltY;
-	this->m_fltZ = fltZ;
-}
-

@@ -6,14 +6,10 @@
 int main()
 {
 	//Exercice 69
-	//b) en utilisant une seule fonction membre
+	//c) En utilisant une seule fonction en ligne.
 
-	CVecteur3 vecteur1 = CVecteur3();
-	std::cout << "Vecteur 1: X = " << vecteur1.getFltX() << " Y = "<< vecteur1.getFltY() << " Z = " << vecteur1.getFltY() << std::endl;
-
-
-	CVecteur3 vecteur2(1,1,1);
-	std::cout << "Vecteur 2: X = " << vecteur2.getFltX() << " Y = " << vecteur2.getFltY() << " Z = " << vecteur2.getFltY() << std::endl;
+	CVecteur3 vecteur1(1,12,4);
+	std::cout << "Vecteur 1: X = " << vecteur1.getFltX() << " Y = " << vecteur1.getFltY() << " Z = " << vecteur1.getFltZ() << std::endl;
 
 	system("pause");
 

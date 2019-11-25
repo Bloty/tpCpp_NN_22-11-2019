@@ -16,6 +16,17 @@ public:
 	void setFtlY(float fltY);
 	void setFtlZ(float fltZ);
 
-	//constructeur
-	CVecteur3(float = 1.0, float = 0.0, float = 0.0);
+	//constructeur dans le fichier d'en-tête
+	/*-------------------------------------
+	But : Construction d'un vecteur 3D avec argument
+	Entrer : l'instence crée avec argument
+	Sortie : Le vecteur inisialiser avec des parametres
+	-------------------------------------*/
+
+	inline CVecteur3(float fltX, float fltY, float fltZ)
+	{
+		this->m_fltX = fltX;
+		this->m_fltY = fltY;
+		this->m_fltZ = fltZ;
+	}
 };
