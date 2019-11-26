@@ -4,6 +4,9 @@ class CVecteur3
 private:
 	float m_fltX, m_fltY, m_fltZ;
 	
+	//membre static pour compter le nombre d'instance
+	static int nNbPoint;
+	
 
 public:
 	//assesseur
@@ -18,8 +21,6 @@ public:
 
 	CVecteur3(float = 0.0, float= 0.0, float= 0.0);
 
-	//Méthode
-	void affichePoint();
-	CVecteur3 somme(CVecteur3);
-	float produitScal(CVecteur3);
+	//methode statique
+	static void compte();
 };

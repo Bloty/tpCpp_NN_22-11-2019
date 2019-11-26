@@ -1,6 +1,8 @@
 #include <iostream>
 #include "CVecteur3.h"
 
+int CVecteur3::nNbPoint;
+
 
 //assesseur
 float CVecteur3::getFltX()
@@ -41,41 +43,14 @@ CVecteur3::CVecteur3(float fltX, float fltY, float fltZ)
 	this->m_fltX = fltX;
 	this->m_fltY = fltY;
 	this->m_fltZ = fltZ;
-}
-
-//Méthodes
-/*-------------------------------------
-But : Afficher les coordonner d'un point vecteur 3d
-Entrer : Le point a afficher
-Sortie : les coordonner d'un point afficher
--------------------------------------*/
-void CVecteur3::affichePoint()
-{
-	std::cout << "<" << this->m_fltX << ", " << this->m_fltY << ", " << this->m_fltZ << ">" << std::endl;
+	nNbPoint++;//incrémantation de compteur de point
 }
 
 /*-------------------------------------
-But : Faire la somme entre deux vecteur
-Entrer : deux vecteurs de type CVecteur
-Sortie : la somme de type CVecteur
+But : afficher le nombre de point crée
 -------------------------------------*/
-CVecteur3 CVecteur3::somme(CVecteur3 vecteur)
+void CVecteur3::compte()
 {
-	CVecteur3 resultat;
-
-	resultat.m_fltX = this->m_fltX + vecteur.m_fltX;
-	resultat.m_fltY = this->m_fltY + vecteur.m_fltY;
-	resultat.m_fltZ = this->m_fltZ + vecteur.m_fltZ;
-
-	return resultat;
+	std::cout << "nb point : " << CVecteur3::nNbPoint << std::endl;
 }
 
-/*-------------------------------------
-But : Donner le produit scalaire de 2 vecteur
-Entrer : deux vecteurs de type CVecteur
-Sortie : le produit scalaire de type float
--------------------------------------*/
-float CVecteur3::produitScal(CVecteur3 vecteur)
-{
-	return this->m_fltX*vecteur.m_fltX + this->m_fltY * vecteur.m_fltY + this->m_fltZ * vecteur.m_fltZ;
-}
