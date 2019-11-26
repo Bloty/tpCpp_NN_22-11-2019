@@ -32,5 +32,5 @@ public:
 
 	//Méthode
 	void affichePoint();
-	bool coincide(CVecteur3*);
+	bool coincide(CVecteur3&);
 };

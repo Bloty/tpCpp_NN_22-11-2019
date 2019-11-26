@@ -40,15 +40,15 @@ void CVecteur3::affichePoint()
 	std::cout << "X = " << this->m_fltX << " Y = " << this->m_fltY << " Z = " << this->m_fltZ << std::endl;
 }
 
-//passage par adresse
+//passage par  référence
 /*-------------------------------------
 But : Verifier si deux point dans un plan 3d son identique
 Entrer : les deux point a comparer
 Sortie : un booleen vrai ou faux
 -------------------------------------*/
-bool CVecteur3::coincide(CVecteur3 * vecteurTest)
+bool CVecteur3::coincide(CVecteur3 & vecteurTest)
 {
-	if ((this->m_fltX == vecteurTest->m_fltX) && (this->m_fltY == vecteurTest->m_fltY) && (this->m_fltZ == vecteurTest->m_fltZ))
+	if ((this->m_fltX == vecteurTest.m_fltX) && (this->m_fltY == vecteurTest.m_fltY) && (this->m_fltZ == vecteurTest.m_fltZ))
 	{
 		return true;
 	}

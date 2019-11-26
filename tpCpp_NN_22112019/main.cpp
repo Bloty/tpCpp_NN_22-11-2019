@@ -6,10 +6,10 @@
 int main()
 {
 	//Exercice 70
-	//b) en utilisant une transmission par adresse
+	//c) en utilisant une transmission par référence
 
 	CVecteur3 vecteur1(1, 12, 4);
-	CVecteur3 vecteur2(1, 12, 4);
+	CVecteur3 vecteur2(2, 12, 4);
 
 	std::cout << "Vecteur 1:"<< std::endl;
 	vecteur1.affichePoint();
@@ -17,7 +17,7 @@ int main()
 	vecteur2.affichePoint();
 	
 	
-	std::cout << "les points coincide t'il? " << vecteur1.coincide(&vecteur2)<<std::endl;
+	std::cout << "les points coincide t'il? " << vecteur1.coincide(vecteur2)<<std::endl;
 
 	
 
