@@ -6,7 +6,7 @@
 int main()
 {
 	//Exercice 71
-	//a) le résultat est renvoyé par valeurþ
+	//b) Le résultat est renvoyé par référence, l’argument (explicite) étant également transmis par référence
 
 	CVecteur3 vecteur1(4, 12, 4);
 	CVecteur3 vecteur2(2, 12, 4);

@@ -32,5 +32,5 @@ public:
 
 	//Méthode
 	void affichePoint();
-	CVecteur3 norMax(CVecteur3 vecteurTest);
+	CVecteur3  & norMax(CVecteur3 & vecteurTest);
 };

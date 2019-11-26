@@ -46,7 +46,7 @@ But : Permet d’obtenir, parmi deux vecteurs, celui qui a la plus grande norme.
 Entrer : 2 point de type vecteur 3d
 Sortie : le vecteur avec la plus grande norme
 -------------------------------------*/
-CVecteur3 CVecteur3::norMax(CVecteur3 vecteurTest)
+CVecteur3 & CVecteur3::norMax(CVecteur3 & vecteurTest)
 {
 	float ftlNorme1,ftlNorme2;
 
