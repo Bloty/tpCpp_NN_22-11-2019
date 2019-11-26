@@ -6,7 +6,7 @@
 int main()
 {
 	//Exercice 71
-	//b) Le résultat est renvoyé par référence, l’argument (explicite) étant également transmis par référence
+	//c) . le résultat est renvoyé par adresse, l’argument (explicite) étant également transmis par adresse.
 
 	CVecteur3 vecteur1(4, 12, 4);
 	CVecteur3 vecteur2(2, 12, 4);
@@ -16,7 +16,7 @@ int main()
 	std::cout << "Vecteur 2:" << std::endl;
 	vecteur2.affichePoint();
 
-	CVecteur3 vecteurNormeMax = vecteur1.norMax(vecteur2);
+	CVecteur3 vecteurNormeMax = *vecteur1.norMax(&vecteur2);
 	
 	vecteurNormeMax.affichePoint();
 
