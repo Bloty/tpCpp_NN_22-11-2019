@@ -5,21 +5,20 @@
 
 int main()
 {
-	//Exercice 70
-	//c) en utilisant une transmission par référence
+	//Exercice 71
+	//a) le résultat est renvoyé par valeurþ
 
-	CVecteur3 vecteur1(1, 12, 4);
+	CVecteur3 vecteur1(4, 12, 4);
 	CVecteur3 vecteur2(2, 12, 4);
 
 	std::cout << "Vecteur 1:"<< std::endl;
 	vecteur1.affichePoint();
 	std::cout << "Vecteur 2:" << std::endl;
 	vecteur2.affichePoint();
-	
-	
-	std::cout << "les points coincide t'il? " << vecteur1.coincide(vecteur2)<<std::endl;
 
+	CVecteur3 vecteurNormeMax = vecteur1.norMax(vecteur2);
 	
+	vecteurNormeMax.affichePoint();
 
 	system("pause");
 
