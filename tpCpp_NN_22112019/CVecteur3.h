@@ -29,4 +29,8 @@ public:
 		this->m_fltY = fltY;
 		this->m_fltZ = fltZ;
 	}
+
+	//Méthode
+	void affichePoint();
+	bool coincide(CVecteur3);
 };

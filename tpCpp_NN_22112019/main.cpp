@@ -5,11 +5,21 @@
 
 int main()
 {
-	//Exercice 69
-	//c) En utilisant une seule fonction en ligne.
+	//Exercice 70
+	//a) en utilisant une transmission par valeur
 
 	CVecteur3 vecteur1(1,12,4);
-	std::cout << "Vecteur 1: X = " << vecteur1.getFltX() << " Y = " << vecteur1.getFltY() << " Z = " << vecteur1.getFltZ() << std::endl;
+	CVecteur3 vecteur2(8, 12, 4);
+
+	std::cout << "Vecteur 1:"<< std::endl;
+	vecteur1.affichePoint();
+	std::cout << "Vecteur 2:" << std::endl;
+	vecteur2.affichePoint();
+	
+	
+	std::cout << "les points coincide t'il? " << vecteur1.coincide(vecteur2)<<std::endl;
+
+	
 
 	system("pause");
 
