@@ -29,7 +29,21 @@ void CVecteur3::setFtlZ(float fltZ)
 	this->m_fltZ = fltZ;
 }
 
-//Méthode
+//constructeur
+/*-------------------------------------
+But : Construction d'un vecteur 3D sans ou avec argument
+Entrer : l'instence crée sans ou avec argument
+Sortie : Le vecteur inisialiser a 0 ou avec des parametres
+-------------------------------------*/
+
+CVecteur3::CVecteur3(float fltX, float fltY, float fltZ)
+{
+	this->m_fltX = fltX;
+	this->m_fltY = fltY;
+	this->m_fltZ = fltZ;
+}
+
+//Méthodes
 /*-------------------------------------
 But : Afficher les coordonner d'un point vecteur 3d
 Entrer : Le point a afficher
@@ -37,31 +51,31 @@ Sortie : les coordonner d'un point afficher
 -------------------------------------*/
 void CVecteur3::affichePoint()
 {
-	std::cout << "X = " << this->m_fltX << " Y = " << this->m_fltY << " Z = " << this->m_fltZ << std::endl;
+	std::cout << "<" << this->m_fltX << ", " << this->m_fltY << ", " << this->m_fltZ << ">" << std::endl;
 }
-
 
 /*-------------------------------------
-But : Permet d’obtenir, parmi deux vecteurs, celui qui a la plus grande norme.
-Entrer : 2 point de type vecteur 3d
-Sortie : le vecteur avec la plus grande norme
+But : Faire la somme entre deux vecteur
+Entrer : deux vecteurs de type CVecteur
+Sortie : la somme de type CVecteur
 -------------------------------------*/
-CVecteur3 * CVecteur3::norMax(CVecteur3 * vecteurTest)
+CVecteur3 CVecteur3::somme(CVecteur3 vecteur)
 {
-	float ftlNorme1,ftlNorme2;
+	CVecteur3 resultat;
 
-	ftlNorme1 = this->m_fltX * this->m_fltX + this->m_fltY * this->m_fltY + this->m_fltZ * this->m_fltZ;
-	ftlNorme2 = vecteurTest->m_fltX * vecteurTest->m_fltX + vecteurTest->m_fltY * vecteurTest->m_fltY + vecteurTest->m_fltZ * vecteurTest->m_fltZ;
-	
-	if (ftlNorme1 > ftlNorme2)
-	{
-		return this;
-	}
-	else
-	{
-		return vecteurTest;
-	}
+	resultat.m_fltX = this->m_fltX + vecteur.m_fltX;
+	resultat.m_fltY = this->m_fltY + vecteur.m_fltY;
+	resultat.m_fltZ = this->m_fltZ + vecteur.m_fltZ;
+
+	return resultat;
 }
 
-
-
+/*-------------------------------------
+But : Donner le produit scalaire de 2 vecteur
+Entrer : deux vecteurs de type CVecteur
+Sortie : le produit scalaire de type float
+-------------------------------------*/
+float CVecteur3::produitScal(CVecteur3 vecteur)
+{
+	return this->m_fltX*vecteur.m_fltX + this->m_fltY * vecteur.m_fltY + this->m_fltZ * vecteur.m_fltZ;
+}

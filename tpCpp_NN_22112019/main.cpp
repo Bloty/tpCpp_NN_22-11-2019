@@ -5,21 +5,25 @@
 
 int main()
 {
-	//Exercice 71
-	//c) . le résultat est renvoyé par adresse, l’argument (explicite) étant également transmis par adresse.
+	//Exercice 72
 
-	CVecteur3 vecteur1(4, 12, 4);
+	CVecteur3 vecteur1(1, 2, 4);
 	CVecteur3 vecteur2(2, 12, 4);
 
-	std::cout << "Vecteur 1:"<< std::endl;
+	std::cout << "Vecteur 1 :"<< std::endl;
 	vecteur1.affichePoint();
-	std::cout << "Vecteur 2:" << std::endl;
+	std::cout << "Vecteur 2 :" << std::endl;
 	vecteur2.affichePoint();
 
-	CVecteur3 vecteurNormeMax = *vecteur1.norMax(&vecteur2);
-	
-	vecteurNormeMax.affichePoint();
+	//somme
+	CVecteur3 sommeVec = CVecteur3();
+	sommeVec = vecteur1.somme(vecteur2);
+	std::cout << "Somme des vecteurs :" << std::endl;
+	sommeVec.affichePoint();
 
+	//prod scal
+	std::cout << "Produit scalaire : " << vecteur1.produitScal(vecteur2) << std::endl;
+	
 	system("pause");
 
 	return 0;
